@@ -242,7 +242,13 @@ a modern vehicles.
 There are a plethora of long-range wireless and short-range wireless attacks
 on passenger cars:  
 From Checkoway et al.
-"Global PositioningSystem (GPS),3Satellite Radio (e.g., SiriusXM receiverscommon to late-model vehicles from Honda/Accura, GM,Toyota, Saab, Ford, Kia, BMW and Audi), Digital Radio(including the U.S. HD Radio system, standard on 2011Ford and Volvo models, and Europe’s DAB offered inFord, Audi, Mercedes, Volvo and Toyota among others),and the Radio Data System (RDS) and Traffic MessageChannel (TMC) signals transmitted as digital subcarrierson existing FM-bands"
+"Global PositioningSystem (GPS),3Satellite Radio (e.g., SiriusXM
+receiverscommon to late-model vehicles from Honda/Accura, GM,Toyota, Saab,
+Ford, Kia, BMW and Audi), Digital Radio(including the U.S. HD Radio system,
+standard on 2011Ford and Volvo models, and Europe’s DAB offered inFord, Audi,
+Mercedes, Volvo and Toyota among others),and the Radio Data System (RDS) and
+Traffic MessageChannel (TMC) signals transmitted as digital subcarrierson
+existing FM-bands"
 
 Of course, the key difference with this RF attack surface and passenger
 aircraft is that it includes short-range RF signals such as Bluetooth and
@@ -260,9 +266,41 @@ into a wall.
 On the ground attacks are also remarkably similar to aircraft, though perhaps less complex.
 i.e. you can cut someone's break lines.
 
+Moving into the future, we have systems such as the Tesla autopilot, additional algorithms that
+can be attacked, perhaps due to additional inputs.
+Ignored occlusion patterns in LiDAR point clouds make self-driving cars
+vul-nerable to spoofing attacks [cite][https://www.usenix.org/system/files/sec20-sun.pdf].
+Clearly, a passenger airplane may use LiDAR, but this seems less likely than a self-driving car.
+
 ### Military Use 
 
-#### The Infrastructure of an Unmanned Aerial Vehicle (UAV)
+Until this point, we have assumed that the function, action of the vehicle in
+question has been entirely movement in space, however, this is restrictive. The
+question becomes, what of the attack surfaces of a vehicle designed for a
+particular task, such as surveillance, offense (missiles, bombs), and defensive
+mechanisms (avoidance of missles).
+
+#### The Infrastructure of a General Atomics MQ-1 Predator Drone
+
+Modified and upgraded to carry and fire two AGM-114 Hellfire missiles or other munitions.
+Retired in 2018.
+Also can be used for surveillance.
+Thus, the information carried by the drone may be sensitive, revealing key locations it has taken 
+photos of.
+Note that all movement of the drone is controlled via long-range RF.
+Thus, there are fewer human factors involved in malicious takeover.
+Controlled "via a C-band line-of-sight data link or a Ku-band satellite data link for beyond-line-of-sight operations" (wikipedia).
+Radio is an ARC-210, with built in anti-jamming capabilities, including Havequick and SINCGARS.
+These systems operate via a set of sophisticated frequency hopping and anti-jamming algorithms.
+[cite][https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/]
+There are other components responsible for flight, but it is key to understand that connections are encrypted.
+Uses CTCSS, Continuous Tone-Coded Squelch System, which encodes a low-frequency tone into the signal so only the intended signals are heard on a noisy channel.
+[cite][https://web.archive.org/web/20160304081715/http://www.afceaboston.com/documents/events/cnsatm2011/Briefs/02-Tuesday/Tuesday-PM%20Track-2/04-Maher-ARC-210%20Program%20Overview-Tuesday%20Track2.pdf]
+[cite][https://www.raytheon.com/capabilities/products/apx100v]
+Still, the ARC-210 is manufactured by Rockwell Collins, so one adversary model is a manufacture-time attack, reasonable in the case of national adversaries.
+Still, an adversary process would be the same: there are a unique set of protocols used by the ARC-210, such as the Tactical Secure Voice Cryptographic
+Interoperability Specification (TSVCIS). 
+The main differences are that 1) acquiring components is more difficult, and 2) the protocols and systems are likely harder to attack.
 
 #### The Infrastructure of a Tank
 
