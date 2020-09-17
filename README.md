@@ -315,6 +315,10 @@ capable of taking down a drone due to the capacity of the system for piloting
 under fine-grained scenarios.  This is partially due to the human factors
 involved in piloting the drone.
 
+Example: "White  Sands  Missile  Range  test  exercise  demon-strated that the
+GPS signals used for navigating anunmanned  aircraft,  or  drone,  can  be
+accessedremotely to divert the flight onto erroneous paths." 
+
 The MIL-STD-188 document is accessible here:
 [cite][http://militarycomms.tripod.com/mil-std-188-141-b/index.htm]
 
@@ -348,25 +352,12 @@ difficult.
 
 ### Civilian Use 
 
+Next, we will look at some consumer electronics, and analyze the threat models to a 
+quadcopter and an RC car.
+
 #### The Infrastructure of a Drone 
 
 #### The Infrastructure of a Rover
-
-Example: "White  Sands  Missile  Range  test  exercise  demon-strated that the
-GPS signals used for navigating anunmanned  aircraft,  or  drone,  can  be
-accessedremotely to divert the flight onto erroneous paths." Example:
-"Germanwings  flight  allegedly  crashed  by  a  suicidal pilot"
-[2][https://commons.erau.edu/cgi/viewcontent.cgi?referer=https://scholar.google.com/&httpsredir=1&article=1343&context=publication]
-
-
-
-Aircraft, drones have greater degrees of mobility in their route planning. 
-
-They may also deal with mobility-based defense mechanisms, i.e. dodging
-missiles.  To an extent, terrestrial vehicles may also need to dodge threats.
-
-Crucially, the greater degree of mobility is one categorical dissimilarity
-between air and terrestrial vehicles.
 
 ## The Similarities Between Air/Ground CPS
 
@@ -380,16 +371,11 @@ end of the day, these are computers.
 
 Unmanned Autonomous Vehicles (UAVs) have gained traction.  False Data Injection
 (FDI) attacks the null space of CPS matrix computations.  FDI circumvents error
-detection techniques in sensor technologies.
-
-Artificial neural network technologies can detect abnormal fluctuations in
-sensor values.
-
-Work in the domain of mobile systems is ultimately work in non-mobile systems.
-E.g. my work on analyzing the update mechanisms for aircraft, other work on EV
-power stations.
-
-Programmable Logic Controllers (PLCs) 
+detection techniques in sensor technologies.  Artificial neural network
+technologies can detect abnormal fluctuations in sensor values.  Work in the
+domain of mobile systems is ultimately work in non-mobile systems.  E.g. my
+work on analyzing the update mechanisms for aircraft, other work on EV power
+stations.
 
 ## The Current State
 
@@ -400,6 +386,7 @@ requires  the  expertise  of  theuser  community—air  traffic  controllers,
 mainte-nance  technicians,  pilots,  and  security  experts—toidentify and rate
 the potential risks and to focus themitigation  options  on  the  most critical
 issues."
+[2][https://commons.erau.edu/cgi/viewcontent.cgi?referer=https://scholar.google.com/&httpsredir=1&article=1343&context=publication]
 
 ## References
 
