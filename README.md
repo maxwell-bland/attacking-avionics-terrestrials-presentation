@@ -315,7 +315,36 @@ capable of taking down a drone due to the capacity of the system for piloting
 under fine-grained scenarios.  This is partially due to the human factors
 involved in piloting the drone.
 
-#### The Infrastructure of a Tank
+The MIL-STD-188 document is accessible here:
+[cite][http://militarycomms.tripod.com/mil-std-188-141-b/index.htm]
+
+#### The Cyber-Infrastructure of a Chrysler Defense M1 Abrams Tank
+
+A report unclassified in 2005 reports that "Where the M1A1 was 90 percent analog, the M1A2 is 90 percent digital."
+"The Abrams cannot rely solely on a satellite-based GPS system, because terrain often blocks access of the GPS receivers to satellites"
+"PosNav overcomes this problem by coupling GPS with an inertial navigation system"
+[cite][https://apps.dtic.mil/dtic/tr/fulltext/u2/a476340.pdf]
+
+2015 report to congress notes plans to "Upgrades to the tank's electronic
+architecture and power distribution system enable integration of the Army's
+future battle command and communication systems. Protection improvements
+include armor upgrade and integration of counter radio-controlled IED
+electronic jammers"
+This points out that jammers we a very real threat.
+"These tanks areconfigured with additional technologies to improvecrew
+situational awareness (SA). Thesituational awareness package increases the
+tank's fighting capability by providing soldiers with Blue Force Tracker,
+aGlobal Positioning System (GPS)-basedsystem whichprovides commanders and
+unitswith location information about friendly andhostile military forces. "
+[cite][https://www.everycrsreport.com/files/20151015_R44229_cb4621ae83833c65644228a2739366b69dfe482f.pdf]
+
+The BFT is the primary method of coordinating tanks on the battlefield, though
+there are pushes to adopt military satellites for ground-to-air communications
+due to security concerns
+[cite][https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4086753].  As of
+2005, some communications we unencrypted.  Still, we can note that the attack
+model is roughly the same: it is just that the access to components is more
+difficult.
 
 ### Civilian Use 
 
