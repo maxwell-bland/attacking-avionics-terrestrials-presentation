@@ -282,25 +282,38 @@ mechanisms (avoidance of missles).
 
 #### The Infrastructure of a General Atomics MQ-1 Predator Drone
 
-Modified and upgraded to carry and fire two AGM-114 Hellfire missiles or other munitions.
-Retired in 2018.
-Also can be used for surveillance.
-Thus, the information carried by the drone may be sensitive, revealing key locations it has taken 
-photos of.
-Note that all movement of the drone is controlled via long-range RF.
-Thus, there are fewer human factors involved in malicious takeover.
-Controlled "via a C-band line-of-sight data link or a Ku-band satellite data link for beyond-line-of-sight operations" (wikipedia).
-Radio is an ARC-210, with built in anti-jamming capabilities, including Havequick and SINCGARS.
-These systems operate via a set of sophisticated frequency hopping and anti-jamming algorithms.
+Modified and upgraded to carry and fire two AGM-114 Hellfire missiles or other
+munitions.  Retired in 2018.  Also can be used for surveillance.  Thus, the
+information carried by the drone may be sensitive, revealing key locations it
+has taken photos of.  Note that all movement of the drone is controlled via
+long-range RF.  Thus, there are fewer human factors involved in malicious
+takeover.  Controlled "via a C-band line-of-sight data link or a Ku-band
+satellite data link for beyond-line-of-sight operations" (wikipedia).  Radio is
+an ARC-210, with built in anti-jamming capabilities, including Havequick and
+SINCGARS.  These systems operate via a set of sophisticated frequency hopping
+and anti-jamming algorithms.
 [cite][https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104469/mq-1b-predator/]
-There are other components responsible for flight, but it is key to understand that connections are encrypted.
-Uses CTCSS, Continuous Tone-Coded Squelch System, which encodes a low-frequency tone into the signal so only the intended signals are heard on a noisy channel.
+There are other components responsible for flight, but it is key to understand
+that connections are encrypted.  Uses CTCSS, Continuous Tone-Coded Squelch
+System, which encodes a low-frequency tone into the signal so only the intended
+signals are heard on a noisy channel.
 [cite][https://web.archive.org/web/20160304081715/http://www.afceaboston.com/documents/events/cnsatm2011/Briefs/02-Tuesday/Tuesday-PM%20Track-2/04-Maher-ARC-210%20Program%20Overview-Tuesday%20Track2.pdf]
-[cite][https://www.raytheon.com/capabilities/products/apx100v]
-Still, the ARC-210 is manufactured by Rockwell Collins, so one adversary model is a manufacture-time attack, reasonable in the case of national adversaries.
-Still, an adversary process would be the same: there are a unique set of protocols used by the ARC-210, such as the Tactical Secure Voice Cryptographic
-Interoperability Specification (TSVCIS). 
-The main differences are that 1) acquiring components is more difficult, and 2) the protocols and systems are likely harder to attack.
+[cite][https://www.raytheon.com/capabilities/products/apx100v] Still, the
+ARC-210 is manufactured by Rockwell Collins, so one adversary model is a
+manufacture-time attack, reasonable in the case of national adversaries.
+Still, an adversary process would be the same: there are a unique set of
+protocols used by the ARC-210, such as the Tactical Secure Voice Cryptographic
+Interoperability Specification (TSVCIS) and MIL-STD-188, the military standard
+for telecommunications.  The main differences are that 1) acquiring components
+is more difficult, and 2) the protocols and systems are harder to attack.  An
+adversary would also need to compromise mission-specific RF control keys, so
+long as there are not vulnerabilities in message reciept functions.
+[cite][https://apps.dtic.mil/dtic/tr/fulltext/u2/a538348.pdf] also outlines
+potential attacks that can occur by requiring high precision control of the
+MQ-1 predator.  i.e. certain ground-to-air missile tracking methods may be
+capable of taking down a drone due to the capacity of the system for piloting
+under fine-grained scenarios.  This is partially due to the human factors
+involved in piloting the drone.
 
 #### The Infrastructure of a Tank
 
