@@ -91,7 +91,14 @@ Well, they could change it's position in space.
 At least in this case, the plane does not really have other "functions".
 So, let's see how the position in space is controlled in a passenger aircraft.
 
-Passenger aircraft operate via the communication of several Line Replacable Units (LRUs).
+Aircraft have evolved from using seperate electronic systems, to seperate interconnected systems, to fully integrated systes.
+Seperated interconnected systems are termed "federated" avionics.
+Fully integrated systems are "modular" avionics.
+Federated avionics are used in the most common passenger aircraft today, including the Boeing 737.
+[4][https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4106349]
+
+Federated aircraft operate via the communication of several Line Replacable Units (LRUs).
+[3][https://www.usenix.org/system/files/cset19-paper_crow.pdf]
 It is assumed in this case that these LRUs contain no sensitive information.
 This assumption is broken under obvious cases. 
 It is also assumed they are airgapped from passenger network traffic.
@@ -115,12 +122,41 @@ However, I would like to note that in 2015, LOT Polish Airlines was forced to gr
 [2][https://commons.erau.edu/cgi/viewcontent.cgi?referer=https://scholar.google.com/&httpsredir=1&article=1343&context=publication]
 
 Thus, confining further, let us refine our model to the material that is/will be present when the aircraft is in the air.
-We still have effects either remotely or via a prior on-the-ground attack.
+We still have attacks either remotely or via prior-on-the-ground.
+Since remote takeover is more spicy, we can start with that.
 
-Since remote takeover is more spicy, we can start with that:
-
-" Radio frequency(RF)  links  into  the  aircraft  may  provide  a  possiblepoint  of  entry  for  the  introduction  of  malwareattacks. Many of these links—but not all—are con-sidered strong and robust and may limit the oppor-tunity to jam or spoof the signals without detection.  Weak RF links in the system include the GlobalNavigation Satellite System signal that provides crit-ical navigation information to the pilot and transmitsdata  to  air  traffic  controllers  via  an  onboard  Auto-matic  Dependent  Surveillance–Broadcast  (ADS-B).An   independent   validation   process   has   beendesigned  to  address  some  of  the  threats  to  thesedata—secondary  means  are  needed  to  validate  theaircraft’s location.  "
+There are several Radio Frequency (RF) links present on the aircraft, each of which is potentially dangerous.
+These include the radio altimeter, used to determine the height of the aircraft, the Doppler NAV at 8.8 Ghz, VHF NAV and comm links
+for determining flight information, and others. 
+There also exist connections via the Global Navigation Satellite System or the Automatic Dependent Surveillance Broadcase (ADS-B).
+ADS-B, for example, provides information on traffic, weather, and flight information.
 [2][https://commons.erau.edu/cgi/viewcontent.cgi?referer=https://scholar.google.com/&httpsredir=1&article=1343&context=publication]
+
+These connections are, for example, forwarded into a system for communication.
+In the case of federated avionics, like the 737 (and at least 10 other aircraft), this is a Communication Management Unit (CMU).
+This single computer consisting of a set of several processors for different tasks, is the "gateway" to the rest of the aircraft. 
+It serves as the primary attack surface (though technically there are systems before this fielding RF signals directly).
+
+From this, the attack surface diverges in the case of federated systems. 
+There would be several options for attack, including cockpit display units or the flight management computer directly. 
+Unlike simpler systems, each of these LRUs typically runs its own Real-Time OS (RTOS), and has several applications running.
+They communicate via the ARINC standard set.
+
+In the case of Integrated Modular Avionics, there is an IMA platform that defines the allocation of functions for the aircraft.
+This delegates different portions of physical hardware to different purposes.
+However, little has been done in the study of IMA platform security.
+
+In any case, even though there are a number of computer systems on the aircraft, there are a number of manual overrides, and the adversary would still need to "fool" the human pilots.  
+The extent to which this is possible has been unstudied.
+
+Clearly regardless of the RF channel used, the attack is classic: get control over the system, leak some information from the system, etc..
+The more interesting problems come in the analysis of these systems and the programming of path diversion, or human-factors analysis to cause the pilots to make the incorrect moves.
+Of course, addressing each possible computation that, for instance, the flight management computer does in adjusting for wind speed, is beyond the scope of this presentation.
+
+That brings us to on the ground attacks.
+Clearly, the attacker could try to change the software running on an LRU by updating it, if access is possible.
+They could also physically damage some components, or add some sort of implant to the plane, which allowed for control mid-flight.
+This is as much as I can say on this topic.
 
 #### The Infrastructure of a Passenger Car
 
