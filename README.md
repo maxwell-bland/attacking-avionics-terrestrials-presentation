@@ -1,5 +1,7 @@
 # qualifying-exam
 
+*Note: These are preliminary notes, see the presentation PDF.*
+
 Material and notes relating to a depth subject discussing the threat vector
 differences between air and ground cyber-physical systems (CPS).
 
